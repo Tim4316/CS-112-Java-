@@ -1,0 +1,22 @@
+   public static int compareAlpha(StringNode str1, StringNode str2) {
+        if (str1 == null && str2 == null) {
+            return 0;
+        } else if (str1 == null) {
+            return 1;
+        } else {
+            return 2;
+        } 
+        StringNode trav1 = str1;
+        StringNode trav2 = str2;
+        int count;
+        while (trav1 != null || trav2 != null) {
+            if (trav1.ch < trav2.ch) {
+                count = 1;
+            } else {
+                count = 2;
+            }
+        trav1 = trav1.next;
+        trav2 = trav2.next;
+        }
+        return count;
+    }
